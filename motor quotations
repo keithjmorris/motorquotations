@@ -38,14 +38,28 @@
 "options": [
 {"Select vehicle type",
 {
-{"label": "Private car", "multiplier":  1.0,
-{"label": "Private van", "multiplier":  1.1,
-{"label": "Pickup", "multiplier":  1.2,
-{"label": "Truck", "multiplier":  2.0,
-{"label": "Taxi Z", "multiplier":  1.25,
-{"label": "ZM", "multiplier":  2.0,
-{"label": "ZR", "multiplier":  3.0,
-{"label": "Other", "multiplier":  3.0
+{"label": "Private car", "multiplier":  1.0},
+{"label": "Private van", "multiplier":  1.1},
+{"label": "Pickup", "multiplier":  1.2},
+{"label": "Truck", "multiplier":  2.0},
+{"label": "Taxi Z", "multiplier":  1.25},
+{"label": "ZM", "multiplier":  2.0},
+{"label": "ZR", "multiplier":  3.0},
+{"label": "Other", "multiplier":  3.0}
+]
+},
+{
+"name" : "Driving Experience",
+"options": [
+{"Select driving experience",
+{
+{"label": "Less than 1 year", "multiplier": 2.0},
+{"label": "1 year to 2 years", "multiplier": 1.75},
+{"label": "2 years to 3 years", "multiplier": 1.5},
+{"label": "3 years to 5 years", "multiplier": 1.25},
+{"label": "5 years to 10 years", "multiplier": 1.1},
+{"label": "10 years to 15 years", "multiplier": 1.0},
+{"label": "Over 15 years": 1.0}
 ]
 },
 {
@@ -58,7 +72,7 @@
 {"label": "multiplier": "No claims in last 5 years": 1.1},
 {"label": "multiplier": "No claims in last 10 years": 1.0}
 ]
-},
+}
 
 
 
