@@ -13,10 +13,10 @@
       { "label": "Select age", "multiplier": 0.0 },
       { "label": "17-21", "multiplier": 2.0 },
       { "label": "22-25", "multiplier": 1.75 },
-      { "label": "22-25", "multiplier": 1.5 },
-      { "label": "22-25", "multiplier": 1.25 },
-      { "label": "22-25", "multiplier": 1. },
-      { "label": "22-25", "multiplier": 1.25 }
+      { "label": "26-25", "multiplier": 1.5 },
+      { "label": "36-50", "multiplier": 1.25 },
+      { "label": "51-65", "multiplier": 1. },
+      { "label": "Over 65", "multiplier": 1.25 }
     ]
   },
 {
