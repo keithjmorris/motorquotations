@@ -2,9 +2,8 @@
 {
     "name": "Gender",
     "options": [
-      { "label": "Select gender", "multiplier": 0.0 },
-      { "label": "Male", "multiplier": 1.1 },
-      { "label": "Female", "multiplier": 0.95 }
+      { "label": "Male", "multiplier": 2.0 },
+      { "label": "Female", "multiplier": 1.0 }
     ]
   },
 {
