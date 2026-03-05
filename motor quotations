@@ -2,6 +2,7 @@
 {
     "name": "Gender",
     "options": [
+      { "label": "Select gender", "multiplier": 0.0 },
       { "label": "Male", "multiplier": 1.1 },
       { "label": "Female", "multiplier": 0.95 }
     ]
@@ -9,7 +10,7 @@
 {
     "name": "Age",
     "options": [
-      {"label": "Select age", "multiplier": 0.0 },
+      { "label": "Select age", "multiplier": 0.0 },
       { "label": "17-21", "multiplier": 2.0 },
       { "label": "22-25", "multiplier": 1.75 },
       { "label": "22-25", "multiplier": 1.5 },
@@ -27,9 +28,9 @@
   {"label":"Subaru", "multiplier": 1.1},
   {"label": "Honda", "multiplier": 1.1},
   {"label": "BMW", "multiplier": 1.5},
-  {"label: "Mercedes", "multiplier": 1.5},
+  {"label": "Mercedes", "multiplier": 1.5},
   {"label": "Ford", "multiplier": 1.0},
-  {label": "Isuzu","multiplier": 1.1},
+  {"label": "Isuzu","multiplier": 1.1},
   {"label": "Nissan","multiplier": 1.0},
   {"label":"Other", "multiplier": 2.0}
 ]
@@ -45,9 +46,10 @@
 {"label":"$45,001 to $60,000", "multiplier": 1.4},
 {"label":"$60,001 to $90,000", "multiplier": 1.5},
 {"label":"$90,001 to $120,000", "multiplier": 1.6},
-{"label":"$120,001 to $150,000"v 1.7},
+{"label":"$120,001 to $150,000", "multiplier": 1.7},
 {"label":"$150,001 to $200,000", "multiplier":1.8},
-{"label":"Over $200,000"v 2.0}
+{"label":"Over $200,000", "multiplier": 2.0}
+]
 },
 {
 "name" : "VehicleType",
@@ -73,18 +75,18 @@
 {"label": "3 years to 5 years", "multiplier": 1.25},
 {"label": "5 years to 10 years", "multiplier": 1.1},
 {"label": "10 years to 15 years", "multiplier": 1.0},
-{"label": "Over 15 years": 1.0}
+{"label": "Over 15 years", "multiplier": 1.0}
 ]
 },
 {
 "name" : "ClaimsExperience",
 "options": [
 {"label": "Select claims experience", "multiplier": 0.0 },
-{"label": "multiplier": "No claims in last year": 1.5},
-{"label": "multiplier": "No claims in last 2 years": 1.4},
-{"label": "multiplier": "No claims in last 3 years": 1.25},
-{"label": "multiplier": "No claims in last 5 years": 1.1},
-{"label": "multiplier": "No claims in last 10 years": 1.0}
+{"label": "No claims in last year", "multiplier":  1.5},
+{"label": "No claims in last 2 years", "multiplier":  1.4},
+{"label": "No claims in last 3 years", "multiplier":  1.25},
+{"label": "No claims in last 5 years", "multiplier":  1.1},
+{"label": "No claims in last 10 years", "multiplier":  1.0}
 ]
 }
 ]
