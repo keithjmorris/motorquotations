@@ -9,7 +9,7 @@
 {
     "name": "Age",
     "options": [
-{"Select age",
+      {"label": "Select age", "multiplier": 0.0 },
       { "label": "17-21", "multiplier": 2.0 },
       { "label": "22-25", "multiplier": 1.75 },
       { "label": "22-25", "multiplier": 1.5 },
@@ -21,7 +21,7 @@
 {
 "name" : "VehicleMake",
 "options": [
-{"Select vehicle make",
+  {"label": "Select vehicle make", "multiplier": 0.0 },
   {"label": "Suzuki", "multiplier": 1.0},
   {"label": "Toyota", "multiplier": 1.0},
   {"label":"Subaru", "multiplier": 1.1},
@@ -37,9 +37,7 @@
 {
 "name" : "VehicleValue",
 "options": [
-{
-"Select vehicle value",
-}
+{"label": "Select vehicle value", "multiplier": 0.0 },
 {"label":"Up to $15,000", "multiplier": 1.0},
 {"label":"$15,001 to $20,000", "multiplier": 1.1},
 {"label":"$20,001 to $30,000", "multiplier": 1.2},
@@ -54,8 +52,7 @@
 {
 "name" : "VehicleType",
 "options": [
-{"Select vehicle type",
-{
+{"label": "Select vehicle type", "multiplier": 0.0 },
 {"label": "Private car", "multiplier":  1.0},
 {"label": "Private van", "multiplier":  1.1},
 {"label": "Pickup", "multiplier":  1.2},
@@ -69,8 +66,7 @@
 {
 "name" : "Driving Experience",
 "options": [
-{"Select driving experience",
-{
+{"label": "Select driving experience", "multiplier": 0.0},
 {"label": "Less than 1 year", "multiplier": 2.0},
 {"label": "1 year to 2 years", "multiplier": 1.75},
 {"label": "2 years to 3 years", "multiplier": 1.5},
@@ -83,7 +79,7 @@
 {
 "name" : "ClaimsExperience",
 "options": [
-{"Select claims experience",
+{"label": "Select claims experience", "multiplier": 0.0 },
 {"label": "multiplier": "No claims in last year": 1.5},
 {"label": "multiplier": "No claims in last 2 years": 1.4},
 {"label": "multiplier": "No claims in last 3 years": 1.25},
@@ -91,6 +87,7 @@
 {"label": "multiplier": "No claims in last 10 years": 1.0}
 ]
 }
+]
 
 
 
