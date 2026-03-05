@@ -1,12 +1,36 @@
-[{"Select vehicle make",
-  "Suzuki",
-  "Toyota",
-  "Subaru",
-  "Honda",
-  "BMW",
-  "Mercedes",
-  "Ford",
-  "Isuzu",
-  "Nissan",
-  "Other"}
+[
+{
+    "name": "Gender",
+    "options": [
+      { "label": "Male", "multiplier": 1.1 },
+      { "label": "Female", "multiplier": 0.95 }
+    ]
+  },
+{
+    "name": "Age",
+    "options": [
+      { "label": "17-21", "multiplier": 2.0 },
+      { "label": "22-25", "multiplier": 1.75 }
+      { "label": "22-25", "multiplier": 1.75 }
+      { "label": "22-25", "multiplier": 1.75 }
+      { "label": "22-25", "multiplier": 1.75 }
+      { "label": "22-25", "multiplier": 1.75 }
+    ]
+  },
+{
+"name" : "vehicleMake",
+"options": [
+{"Select vehicle make",
+  {"label": "Suzuki", "multiplier": 1.0},
+  {"label": "Toyota", "multiplier": 1.0},
+  {"label":"Subaru", "multiplier": 1.1},
+  {"label": "Honda", "multiplier": 1.1},
+  {"label": "BMW", "multiplier": 1.5},
+  {"label: "Mercedes", "multiplier": 1.5},
+  {"label": "Ford", "multiplier": 1.0},
+  {label": "Isuzu","multiplier": 1.1},
+  {"label": "Nissan","multiplier": 1.0},
+  {"label":"Other", "multiplier": 2.0}}
 ]
+},
+
