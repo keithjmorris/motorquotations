@@ -10,15 +10,15 @@
     "name": "Age",
     "options": [
       { "label": "17-21", "multiplier": 2.0 },
-      { "label": "22-25", "multiplier": 1.75 }
-      { "label": "22-25", "multiplier": 1.75 }
-      { "label": "22-25", "multiplier": 1.75 }
-      { "label": "22-25", "multiplier": 1.75 }
+      { "label": "22-25", "multiplier": 1.75 },
+      { "label": "22-25", "multiplier": 1.75 },
+      { "label": "22-25", "multiplier": 1.75 },
+      { "label": "22-25", "multiplier": 1.75 },
       { "label": "22-25", "multiplier": 1.75 }
     ]
   },
 {
-"name" : "vehicleMake",
+"name" : "VehicleMake",
 "options": [
 {"Select vehicle make",
   {"label": "Suzuki", "multiplier": 1.0},
@@ -30,7 +30,20 @@
   {"label": "Ford", "multiplier": 1.0},
   {label": "Isuzu","multiplier": 1.1},
   {"label": "Nissan","multiplier": 1.0},
-  {"label":"Other", "multiplier": 2.0}}
+  {"label":"Other", "multiplier": 2.0}
 ]
 },
+{
+"name" : "ClaimsExperience",
+"options": [
+{"Select claims experience",
+{"label": "multiplier": "No claims in last year": 1.5},
+{"label": "multiplier": "No claims in last 2 years": 1.4},
+{"label": "multiplier": "No claims in last 3 years": 1.25},
+{"label": "multiplier": "No claims in last 5 years": 1.1},
+{"label": "multiplier": "No claims in last 10 years": 1.0}
+]
+},
+
+
 
