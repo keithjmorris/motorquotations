@@ -1,94 +1,392 @@
-[
-{
-    "name": "Gender",
-    "options": [
-      { "label": "Male", "multiplier": 2.0 },
-      { "label": "Female", "multiplier": 1.0 }
-    ]
-  },
-{
-    "name": "Age",
-    "options": [
-      { "label": "Select age", "multiplier": 0.0 },
-      { "label": "17-21", "multiplier": 2.0 },
-      { "label": "22-25", "multiplier": 1.75 },
-      { "label": "26-35", "multiplier": 1.5 },
-      { "label": "36-50", "multiplier": 1.25 },
-      { "label": "51-65", "multiplier": 1.0 },
-      { "label": "Over 65", "multiplier": 1.25 }
-    ]
-  },
-{
-"name" : "VehicleMake",
-"options": [
-  {"label": "Select vehicle make", "multiplier": 0.0 },
-  {"label": "Suzuki", "multiplier": 1.0},
-  {"label": "Toyota", "multiplier": 1.0},
-  {"label":"Subaru", "multiplier": 1.1},
-  {"label": "Honda", "multiplier": 1.1},
-  {"label": "BMW", "multiplier": 1.5},
-  {"label": "Mercedes", "multiplier": 1.5},
-  {"label": "Ford", "multiplier": 1.0},
-  {"label": "Isuzu","multiplier": 1.1},
-  {"label": "Nissan","multiplier": 1.0},
-  {"label":"Other", "multiplier": 2.0}
-]
-},
-{
-"name" : "VehicleValue",
-"options": [
-{"label": "Select vehicle value", "multiplier": 0.0 },
-{"label":"Up to $15,000", "multiplier": 1.0},
-{"label":"$15,001 to $20,000", "multiplier": 1.1},
-{"label":"$20,001 to $30,000", "multiplier": 1.2},
-{"label":"$30,001 to $45,000", "multiplier": 1.3},
-{"label":"$45,001 to $60,000", "multiplier": 1.4},
-{"label":"$60,001 to $90,000", "multiplier": 1.5},
-{"label":"$90,001 to $120,000", "multiplier": 1.6},
-{"label":"$120,001 to $150,000", "multiplier": 1.7},
-{"label":"$150,001 to $200,000", "multiplier":1.8},
-{"label":"Over $200,000", "multiplier": 2.0}
-]
-},
-{
-"name" : "VehicleType",
-"options": [
-{"label": "Select vehicle type", "multiplier": 0.0 },
-{"label": "Private car", "multiplier":  1.0},
-{"label": "Private van", "multiplier":  1.1},
-{"label": "Pickup", "multiplier":  1.2},
-{"label": "Truck", "multiplier":  2.0},
-{"label": "Taxi Z", "multiplier":  1.25},
-{"label": "ZM", "multiplier":  2.0},
-{"label": "ZR", "multiplier":  3.0},
-{"label": "Other", "multiplier":  3.0}
-]
-},
-{
-"name" : "Driving Experience",
-"options": [
-{"label": "Select driving experience", "multiplier": 0.0},
-{"label": "Less than 1 year", "multiplier": 2.0},
-{"label": "1 year to 2 years", "multiplier": 1.75},
-{"label": "2 years to 3 years", "multiplier": 1.5},
-{"label": "3 years to 5 years", "multiplier": 1.25},
-{"label": "5 years to 10 years", "multiplier": 1.1},
-{"label": "10 years to 15 years", "multiplier": 1.0},
-{"label": "Over 15 years", "multiplier": 1.0}
-]
-},
-{
-"name" : "ClaimsExperience",
-"options": [
-{"label": "Select claims experience", "multiplier": 0.0 },
-{"label": "No claims in last year", "multiplier":  1.5},
-{"label": "No claims in last 2 years", "multiplier":  1.4},
-{"label": "No claims in last 3 years", "multiplier":  1.25},
-{"label": "No claims in last 5 years", "multiplier":  1.1},
-{"label": "No claims in last 10 years", "multiplier":  1.0}
-]
+OK, we' definitely have a problem.  Clearly, I've either deleted something I shouldn't have or not deleted something I should have.  Firstly, the premium is still showing before the user inserts the personal details and secondly there is a block of text that should not be there - please see screenshot<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Insurance Quote</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f2f2f7;
+            color: #1c1c1e;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 24px;
+            font-size: 28px;
+            color: #1c1c1e;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            color: #6c6c70;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #e5e5ea;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            background: white;
+            color: #1c1c1e;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #007aff;
+        }
+
+        .gender-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .gender-btn {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #e5e5ea;
+            border-radius: 8px;
+            background: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .gender-btn.selected {
+            background: #007aff;
+            color: white;
+            border-color: #007aff;
+        }
+
+        .premium-display {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .premium-amount {
+            font-size: 48px;
+            font-weight: bold;
+            color: #007aff;
+        }
+
+        .premium-label {
+            font-size: 14px;
+            color: #6c6c70;
+            margin-top: 4px;
+        }
+
+        .breakdown-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid #f2f2f7;
+            font-size: 14px;
+        }
+
+        .breakdown-row:last-child {
+            border-bottom: none;
+        }
+
+        button.submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: #007aff;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+
+        button.submit-btn:hover {
+            background: #0056b3;
+        }
+
+        button.submit-btn:disabled {
+            background: #c7c7cc;
+            cursor: not-allowed;
+        }
+
+        .confirmation {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .confirmation h2 {
+            font-size: 24px;
+            color: #34c759;
+            margin-bottom: 12px;
+        }
+
+        .reference {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1c1c1e;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Motor Insurance Quote</h1>
+
+        <div id="quoteForm">
+            <div id="factorsContainer"></div>
+
+            <div class="card" id="premiumCard" style="display:none;">
+    <h2>Your Premium</h2>
+    <div class="premium-display">
+        <div class="premium-amount" id="premiumAmount">£0.00</div>
+        <div class="premium-label">Annual premium</div>
+    </div>
+</div>
+
+            <div class="card">
+    <h2>Your Details</h2>
+    <input type="text" id="name" placeholder="Full Name" oninput="checkDetailsComplete()">
+    <input type="text" id="address" placeholder="Street Address" oninput="checkDetailsComplete()">
+    <input type="text" id="city" placeholder="City" oninput="checkDetailsComplete()">
+    <input type="text" id="postcode" placeholder="Postcode" oninput="checkDetailsComplete()">
+    <input type="email" id="email" placeholder="Email Address" oninput="checkDetailsComplete()">
+    <input type="tel" id="phone" placeholder="Phone Number" oninput="checkDetailsComplete()">
+</div>
+
+            <button class="submit-btn" id="submitBtn" onclick="submitQuote()">
+                Get My Quote
+            </button>
+        </div>
+
+        <div class="confirmation" id="confirmation">
+            <h2>✓ Quote Saved</h2>
+            <p>Your quote reference is:</p>
+            <div class="reference" id="quoteReference"></div>
+            <p style="margin-top: 16px; color: #6c6c70;">We will be in touch shortly.</p>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAZU4r4sLLeJFhOkZZ1yCuyzgiU5zPCki8",
+            authDomain: "car-insurance-quote-log.firebaseapp.com",
+            projectId: "car-insurance-quote-log",
+            storageBucket: "car-insurance-quote-log.firebasestorage.app",
+            messagingSenderId: "15116182907",
+            appId: "1:15116182907:web:1386bb5d9c4093762609de"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        const BASE_PREMIUM = 500;
+        const FACTORS_URL = "https://raw.githubusercontent.com/keithjmorris/motorquotations/refs/heads/main/motor%20quotations";
+
+        let factors = [];
+        let selections = {};
+
+        async function loadFactors() {
+            try {
+                const response = await fetch(FACTORS_URL);
+                factors = await response.json();
+                renderFactors();
+                updatePremium();
+            } catch (error) {
+                console.error("Failed to load factors:", error);
+            }
+        }
+
+        function checkDetailsComplete() {
+    const name = document.getElementById("name").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const city = document.getElementById("city").value.trim();
+    const postcode = document.getElementById("postcode").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    
+    const allFilled = name && address && city && postcode && email && phone;
+    document.getElementById("premiumCard").style.display = allFilled ? "block" : "none";
+    
+    if (allFilled) updatePremium();
 }
-]
 
+        function renderFactors() {
+            const container = document.getElementById("factorsContainer");
+            container.innerHTML = "";
 
+            factors.forEach(factor => {
+                const card = document.createElement("div");
+                card.className = "card";
 
+                const label = document.createElement("h2");
+                label.textContent = factor.name;
+                card.appendChild(label);
+
+                if (factor.name === "Gender") {
+                    const btnGroup = document.createElement("div");
+                    btnGroup.className = "gender-buttons";
+
+                    factor.options.forEach(option => {
+                        const btn = document.createElement("button");
+                        btn.className = "gender-btn";
+                        btn.textContent = option.label;
+                        btn.onclick = () => {
+                            selections["Gender"] = option.label;
+                            document.querySelectorAll(".gender-btn").forEach(b => b.classList.remove("selected"));
+                            btn.classList.add("selected");
+                            checkDetailsComplete();
+                        };
+                        btnGroup.appendChild(btn);
+                    });
+
+                    card.appendChild(btnGroup);
+                } else {
+                    const select = document.createElement("select");
+                    select.id = "factor_" + factor.name;
+
+                    factor.options.forEach(option => {
+                        const opt = document.createElement("option");
+                        opt.value = option.label;
+                        opt.textContent = option.label;
+                        select.appendChild(opt);
+                    });
+
+                    select.onchange = () => {
+                        selections[factor.name] = select.value;
+                        checkDetailsComplete();
+                    };
+
+                    selections[factor.name] = factor.options[0].label;
+                    card.appendChild(select);
+                }
+
+                container.appendChild(card);
+            });
+        }
+
+        function updatePremium() {
+            let premium = BASE_PREMIUM;
+            
+
+            factors.forEach(factor => {
+                const selectedLabel = selections[factor.name];
+                const option = factor.options.find(o => o.label === selectedLabel);
+                const multiplier = option ? option.multiplier : 0;
+
+                premium *= multiplier;
+
+            });
+
+            document.getElementById("premiumAmount").textContent =
+                "£" + premium.toFixed(2);
+        }
+
+        async function submitQuote() {
+            const name = document.getElementById("name").value.trim();
+            const address = document.getElementById("address").value.trim();
+            const city = document.getElementById("city").value.trim();
+            const postcode = document.getElementById("postcode").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+
+            if (!name || !address || !city || !postcode || !email || !phone) {
+                alert("Please fill in all your details before submitting.");
+                return;
+            }
+
+            const submitBtn = document.getElementById("submitBtn");
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Saving...";
+
+            let finalPremium = BASE_PREMIUM;
+            const quoteData = {
+                name,
+                streetAddress: address,
+                city,
+                zip: postcode,
+                email,
+                phoneNumber: phone,
+                basePremium: BASE_PREMIUM,
+                dateCreated: new Date(),
+                status: "Issued"
+            };
+
+            const fieldMap = {
+                "Gender": ["selectedGender", "genderMultiplier"],
+                "Age": ["selectedAge", "ageMultiplier"],
+                "VehicleMake": ["selectedVehicle", "vehicleMultiplier"],
+                "VehicleValue": ["selectedVehicleValue", "vehicleValueMultiplier"],
+                "VehicleType": ["selectedVehicleType", "vehicleTypeMultiplier"],
+                "Driving Experience": ["selectedDrivingExperience", "drivingExperienceMultiplier"],
+                "ClaimsExperience": ["selectedClaimsExperience", "claimsExperienceMultiplier"]
+            };
+
+            factors.forEach(factor => {
+                const selectedLabel = selections[factor.name] || "";
+                const option = factor.options.find(o => o.label === selectedLabel);
+                const multiplier = option ? option.multiplier : 0;
+                finalPremium *= multiplier;
+
+                if (fieldMap[factor.name]) {
+                    quoteData[fieldMap[factor.name][0]] = selectedLabel;
+                    quoteData[fieldMap[factor.name][1]] = multiplier;
+                }
+            });
+
+            quoteData.finalPremium = finalPremium;
+
+            try {
+                const docRef = await addDoc(collection(db, "quotes"), quoteData);
+                document.getElementById("quoteReference").textContent = docRef.id;
+                document.getElementById("quoteForm").style.display = "none";
+                document.getElementById("confirmation").style.display = "block";
+            } catch (error) {
+                console.error("Error saving quote:", error);
+                alert("Failed to save quote. Please try again.");
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Get My Quote";
+            }
+        }
+
+        // Make submitQuote available globally
+        window.submitQuote = submitQuote;
+
+        loadFactors();
+    </script>
+</body>
+</html>
